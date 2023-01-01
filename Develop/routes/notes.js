@@ -1,13 +1,34 @@
 const notes = require('express').Router();
-const { readFromFile, readAndAppend } = require('../fsutils');
 const { v4: uuidv4 } = require('uuid');
-
-
-
-let data = require('../db/db.json');
+const { readFromFile, readAndAppend, writeToFile } = require('../fsutils');
 
 notes.get('/', (req, res) => {
-    readFromFile('../db/db.json').then((data) => res.json(JSON.parse(data)));
+    readFromFile('./db/db.json').then((data) => res.json(JSON.parse(data)));
+});
+
+notes.get('/:id', (req, res) => {
+    const noteId = req.params.id;;
+    readFromFile('./db/db.json')
+        .then((data) => JSON.parse(data)) 
+        .then((json) => {
+            const result = json.filter((note) => note.id === noteId);
+            return result.length > 0
+               ? res.json(result)
+               : res.json('No notes with the specified ID');
+    });
+
+});
+
+notes.delete('/:id', (req, res) => {
+    const noteId = req.params.id;
+    readFromFile('./db/db.json')
+       .then((data) => JSON.parse(data))
+       .then((json) => {
+            const result = json.filter((note) => note.id !== noteId);
+
+        writeToFile('./db/db.json', result);
+        res.json('Note deleted successfully');
+    });
 });
 
 notes.post('/', (req, res) => {
@@ -19,10 +40,10 @@ notes.post('/', (req, res) => {
         const newNote = {
             title,
             text,
-            note_id: uuidv4(),
+            id: uuidv4(),
         };
 
-        readAndAppend(newNote, '../db/db.json');
+        readAndAppend(newNote, './db/db.json');
         res.json('Note added successfully');
     } else {
         res.error('Error in adding note');
