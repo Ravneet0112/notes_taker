@@ -2,11 +2,16 @@
     {
         "title": "Ravneet",
         "text": "Sammewali",
-        "id": "b8494b82-56f4-4911-bf93-199ef3c4627d"
+        "id": "a6d5fb67-2a21-482d-830f-a523ff9c1d4a"
     },
     {
-        "title": "Node JS",
-        "text": "Express\nPublic API \nRoutes\nCreate, Delete, Add, Edit",
-        "id": "37063e83-a1c8-4968-9529-684a0f893780"
+        "title": "Groc.",
+        "text": "Bread\nMilk\nBagel\nFrench fries \nFruits",
+        "id": "030d03d3-077a-4a52-8126-b66b05ea02b0"
+    },
+    {
+        "title": "Assignments",
+        "text": "Try to complete assignments by EOD Wednesday",
+        "id": "6e6fc07c-c861-4fc0-96c9-381c1543df84"
     }
 ]
