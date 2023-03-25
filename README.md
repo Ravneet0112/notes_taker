@@ -20,6 +20,10 @@ Type in node index.js and click on the port number > Which will take user to the
     
 ## Usage
 This project is using NodeJS and express and will help with future nodeJS project. If users wants they can write some useful notes, commands which will be useful in future
+
+GitHub link: https://github.com/Ravneet0112/notes_taker
+
+Heroku link: 
     
 ## Contribution
 This app requires npm install 
