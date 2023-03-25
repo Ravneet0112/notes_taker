@@ -24,6 +24,9 @@ This project is using NodeJS and express and will help with future nodeJS projec
 GitHub link: https://github.com/Ravneet0112/notes_taker
 
 Heroku link: https://week11assignment.herokuapp.com/
+
+![noteTaker](https://user-images.githubusercontent.com/101073782/227696814-612aa043-c147-4959-90d3-c930cbd54535.png)
+
     
 ## Contribution
 This app requires npm install 
