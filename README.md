@@ -23,7 +23,7 @@ This project is using NodeJS and express and will help with future nodeJS projec
 
 GitHub link: https://github.com/Ravneet0112/notes_taker
 
-Heroku link: 
+Heroku link: https://week11assignment.herokuapp.com/
     
 ## Contribution
 This app requires npm install 
